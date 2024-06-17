@@ -1,0 +1,14 @@
+assemble:
+    - fromTask: bootJar
+liferay-sample-etc-spring-boot-oauth-application-user-agent:
+    .serviceAddress: 172.17.0.1:58081
+    .serviceScheme: http
+    name: Liferay Sample Etc Spring Boot OAuth Application User Agent
+    scopes:
+        - Liferay.Headless.Admin.Workflow.everything
+    type: oAuthApplicationUserAgent
+low-code-client-extension:
+    name: Low Code Client Extension
+    oAuth2ApplicationExternalReferenceCode: liferay-sample-etc-spring-boot-oauth-application-user-agent
+    resourcePath: /low-code
+    type: objectAction
