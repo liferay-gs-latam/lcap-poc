@@ -11,6 +11,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
+
 /**
  * @author Raymond Augé
  * @author Gregory Amerson
@@ -18,10 +19,10 @@ import org.springframework.context.annotation.Import;
  */
 @Import(ClientExtensionUtilSpringBootComponentScan.class)
 @SpringBootApplication
-public class LowCodeCXApplication {
+public class RuleValidationCXApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LowCodeCXApplication.class, args);
+		SpringApplication.run(RuleValidationCXApplication.class, args);
 	}
 
 }

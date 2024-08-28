@@ -1,9 +1,16 @@
-package br.com.mtanuri.liferay.lcap.groovy.service;
+package com.liferay.sample;
 
 import groovy.lang.Binding;
 import groovy.lang.GroovyShell;
 import org.codehaus.groovy.control.CompilerConfiguration;
 import org.springframework.stereotype.Service;
+import org.json.JSONObject;
+
+import java.util.stream.Collectors;
+
+import java.util.HashMap;
+import java.util.Map;
+
 
 import java.util.Map;
 
@@ -20,7 +27,6 @@ public class GroovySandbox {
     public static class ScriptExecutionBuilder {
         private final CompilerConfiguration config;
         private String script;
-        private Map<String, Object> inputs;
 
         public ScriptExecutionBuilder(CompilerConfiguration config) {
             this.config = config;
@@ -31,8 +37,26 @@ public class GroovySandbox {
             return this;
         }
 
+        private Map<String, Object> inputs = new HashMap<>();
+
         public ScriptExecutionBuilder inputs(Map<String, Object> inputs) {
-            this.inputs = inputs;
+            this.inputs = new HashMap<>(inputs);
+            return this;
+        }
+
+        public ScriptExecutionBuilder inputs(String key, JSONObject jsonObject) {
+            Map<String, Object> jsonMap = jsonObject.keySet().stream()
+                .collect(Collectors.toMap(
+                    k -> k,
+                    k -> jsonObject.get(k)
+                ));
+
+            if (this.inputs == null) {
+                this.inputs = new HashMap<>();
+            }
+
+            this.inputs.put(key, jsonMap);
+            
             return this;
         }
 

@@ -6,9 +6,10 @@ liferay-sample-etc-spring-boot-oauth-application-user-agent:
     name: Liferay Sample Etc Spring Boot OAuth Application User Agent
     scopes:
         - Liferay.Headless.Admin.Workflow.everything
+        - c_cxgroovyvalidation.everything.read
     type: oAuthApplicationUserAgent
 low-code-client-extension:
     name: Low Code Client Extension
     oAuth2ApplicationExternalReferenceCode: liferay-sample-etc-spring-boot-oauth-application-user-agent
-    resourcePath: /low-code
-    type: objectAction
+    resourcePath: /rule-validation
+    type: objectValidationRule
