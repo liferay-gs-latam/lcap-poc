@@ -1,0 +1,3 @@
+- remover campo objectDefinition ERC do Object cliente
+- buscar o objectDefinition através do ERC do objectEntry (dev version only, performance issue)
+- permitir que o script groovy valide N objectDefinitions

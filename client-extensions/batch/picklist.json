@@ -1,0 +1,19 @@
+{
+    "system": false,
+    "name_i18n": {
+        "en-US": "Client Extenson Validation Rule Manager - Object Definitions"
+    },
+    "name": "Client Extenson Validation Rule Manager - Object Definitions",
+    "listTypeEntries": [
+        {
+            "name_i18n": {
+                "en-US": "foo-object"
+            },
+            "name": "foo-object",
+            "type": "",
+            "key": "fooobject",
+            "externalReferenceCode": "878d750e-e25a-904f-63ac-224c84156a2e"
+        }
+    ],
+    "externalReferenceCode": "cx-object-definitions"
+}

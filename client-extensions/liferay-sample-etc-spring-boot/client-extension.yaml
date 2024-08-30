@@ -8,8 +8,8 @@ liferay-sample-etc-spring-boot-oauth-application-user-agent:
         - Liferay.Headless.Admin.Workflow.everything
         - c_cxgroovyvalidation.everything.read
     type: oAuthApplicationUserAgent
-low-code-client-extension:
-    name: Low Code Client Extension
+object-validation-rule-manager-client-extension:
+    name: Object Validation Rule Manager
     oAuth2ApplicationExternalReferenceCode: liferay-sample-etc-spring-boot-oauth-application-user-agent
     resourcePath: /rule-validation
     type: objectValidationRule
